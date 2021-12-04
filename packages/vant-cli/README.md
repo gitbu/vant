@@ -1,6 +1,6 @@
-# CHATUI ClI
+# COMPLIB ClI
 
-CHATUI ClI 是一个 Vue 组件库构建工具，通过 CHATUI ClI 可以快速搭建一套功能完备的 Vue 组件库。
+COMPLIB ClI 是一个 Vue 组件库构建工具，通过 COMPLIB ClI 可以快速搭建一套功能完备的 Vue 组件库。
 
 ### 特性
 
@@ -15,19 +15,19 @@ CHATUI ClI 是一个 Vue 组件库构建工具，通过 CHATUI ClI 可以快速�
 # step1: 安装vue和vue-template-compiler
 npm 
 # step2: 通过 npm 安装
-npm i chatui-cli -D
+npm i complib-cli -D
 
 安装完成后，请将以下配置添加到 package.json 文件中
 
 ```json
 {
   "scripts": {
-    "dev": "chatui-cli dev",
-    "test": "chatui-cli test",
-    "lint": "chatui-cli lint",
-    "build": "chatui-cli build",
-    "release": "chatui-cli release",
-    "build-site": "chatui-cli build-site"
+    "dev": "complib-cli dev",
+    "test": "complib-cli test",
+    "lint": "complib-cli lint",
+    "build": "complib-cli build",
+    "release": "complib-cli release",
+    "build-site": "complib-cli build-site"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": "eslint --fix",

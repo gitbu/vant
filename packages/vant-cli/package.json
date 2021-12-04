@@ -1,11 +1,11 @@
 {
-  "name": "chatui-cli",
-  "version": "1.0.0",
+  "name": "complib-cli",
+  "version": "1.0.1",
   "description": "",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
   "bin": {
-    "chatui-cli": "lib/index.js"
+    "complib-cli": "lib/index.js"
   },
   "engines": {
     "node": ">=10"
@@ -28,7 +28,7 @@
     "preset.js"
   ],
   "keywords": [
-    "chatui-cli"
+    "complib-cli"
   ],
   "author": "gitbu",
   "license": "MIT",
@@ -114,7 +114,7 @@
   "release-it": {
     "git": {
       "tag": false,
-      "commitMessage": "chore: release chatui-cli@${version}"
+      "commitMessage": "chore: release complib-cli@${version}"
     },
     "npm": {
       "tag": "latest-v2"
