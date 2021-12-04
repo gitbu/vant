@@ -114,7 +114,7 @@
   "release-it": {
     "git": {
       "tag": false,
-      "commitMessage": "chore: release ui-cli@${version}"
+      "commitMessage": "chore: release chatui-cli@${version}"
     },
     "npm": {
       "tag": "latest-v2"
