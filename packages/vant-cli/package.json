@@ -1,5 +1,5 @@
 {
-  "name": "@vant/cli",
+  "name": "@bap/vant-cli",
   "version": "2.11.4",
   "description": "",
   "main": "lib/index.js",
