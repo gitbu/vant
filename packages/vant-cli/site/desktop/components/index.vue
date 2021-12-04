@@ -1,19 +1,20 @@
 <template>
   <div class="van-doc">
     <doc-header
+      v-if="!config.hideHeader"
       :lang="lang"
       :config="config"
       :versions="versions"
       :lang-configs="langConfigs"
       @switch-version="$emit('switch-version', $event)"
     />
-    <doc-nav :lang="lang" :nav-config="config.nav" />
+    <doc-nav :lang="lang" :nav-config="config.nav" :hideHeader="config.hideHeader" />
     <doc-container :has-simulator="hasSimulator">
       <doc-content>
         <slot />
       </doc-content>
     </doc-container>
-    <doc-simulator v-if="hasSimulator" :src="simulator" />
+    <doc-simulator v-if="hasSimulator" :src="simulator" :hideHeader="config.hideHeader" />
   </div>
 </template>
 

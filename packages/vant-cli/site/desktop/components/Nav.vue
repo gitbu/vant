@@ -34,6 +34,7 @@ export default {
   props: {
     lang: String,
     navConfig: Array,
+    hideHeader: Boolean,
   },
 
   data() {
@@ -45,8 +46,9 @@ export default {
 
   computed: {
     style() {
+      const top = this.hideHeader ? 0 : this.top;
       return {
-        top: this.top + 'px',
+        top: top + 'px',
         bottom: this.bottom + 'px',
       };
     },

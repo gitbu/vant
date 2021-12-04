@@ -1,5 +1,5 @@
 <template>
-  <div :class="['van-doc-simulator', { 'van-doc-simulator-fixed': isFixed }]">
+  <div :class="['van-doc-simulator', { 'van-doc-simulator-fixed': isFixed }]" :style="style">
     <iframe ref="iframe" :src="src" :style="simulatorStyle" frameborder="0" />
   </div>
 </template>
@@ -10,6 +10,7 @@ export default {
 
   props: {
     src: String,
+    hideHeader: Boolean,
   },
 
   data() {
@@ -30,6 +31,12 @@ export default {
         height: height + 'px',
       };
     },
+    style() {
+      const res = {};
+      if (this.hideHeader) res.top = '30px';
+      
+      return res;
+    }
   },
 
   mounted() {
