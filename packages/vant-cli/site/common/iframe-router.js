@@ -3,7 +3,7 @@
  */
 
 let queue = [];
-let isIframeReady = false;
+let isIframeReady = true;
 
 function iframeReady(callback) {
   if (isIframeReady) {
@@ -13,17 +13,17 @@ function iframeReady(callback) {
   }
 }
 
-if (window.top === window) {
-  window.addEventListener('message', (event) => {
-    if (event.data.type === 'iframeReady') {
-      isIframeReady = true;
-      queue.forEach((callback) => callback());
-      queue = [];
-    }
-  });
-} else {
-  window.top.postMessage({ type: 'iframeReady' }, '*');
-}
+// if (window.top === window) {
+//   window.addEventListener('message', (event) => {
+//     if (event.data.type === 'iframeReady') {
+//       isIframeReady = true;
+//       queue.forEach((callback) => callback());
+//       queue = [];
+//     }
+//   });
+// } else {
+//   window.top.postMessage({ type: 'iframeReady' }, '*');
+// }
 
 function getCurrentDir() {
   const router = window.vueRouter;
